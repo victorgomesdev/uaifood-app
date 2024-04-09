@@ -15,7 +15,7 @@ export default function LoginPage({ navigation }: any) {
                 <View style={style.innerContainer}>
                     <Input
                         placeholder='Email'
-                        width={180}
+                        width={200}
                         onChangeHandler={() => { }}
                     />
                     <Input
