@@ -25,13 +25,26 @@ const style = StyleSheet.create({
         flex: 3,
         flexDirection: 'column',
         padding: 5,
-        justifyContent: 'center'
+        justifyContent: 'space-around',
+        
     },
     title:{
-        fontSize: 35
+        fontSize: 30
     },
     description:{
         fontSize: 15
+    },
+    nameContainer:{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingLeft: 10,
+        paddingRight: 5,
+        alignItems: 'center'
+    },
+    descContainer:{
+        paddingLeft: 10,
+        paddingRight: 5
     }
 })
  

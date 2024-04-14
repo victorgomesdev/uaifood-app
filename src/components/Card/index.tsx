@@ -1,19 +1,26 @@
 import { Text, TouchableOpacity, Image, View } from "react-native";
 import style from "./style";
-import { CardProps } from "../../types";
+import { DeviceProps } from "../../types";
 
-export default function Card(props: CardProps){
-    return(
+export default function Card(props: DeviceProps, navigation: any) {
+    return (
         <TouchableOpacity
-        activeOpacity={0.6}
-        style={style.card}>
+            activeOpacity={0.6}
+            style={style.card}
+            onPress={()=>{}}>
             <View style={style.imageContainer}>
                 <Image
-                source={require('../../../assets/favicon.png')}/>
+                    source={require('../../../assets/Uaifood.png')}
+                    resizeMode="center"/>
             </View>
             <View style={style.cardContainer}>
-                <Text style={style.title}>Robô</Text>
-                <Text style={style.description}>kdhdgtbfhgvafafsststststttttttsstttttttttttttttttttttttttttttt</Text>
+                <View style={style.nameContainer}>
+                    <Text style={style.title}>Robô</Text>
+                </View>
+                <View style={style.descContainer}>
+                    <Text style={style.description}>kdhdgtbfhgvafafsststststttttttsstttttttttttttttttttttttttttttt</Text>
+
+                </View>
             </View>
         </TouchableOpacity>
     )

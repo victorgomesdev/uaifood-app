@@ -7,25 +7,35 @@ import LoginPage from './pages/Login'
 import Home from './pages/Home'
 import * as env from '../env.json'
 import Profile from './components/Profile'
+import ProfileScreen from './pages/Profile'
 
 const Stack = createNativeStackNavigator()
 
 export default function Routes() {
     return (
-        <Stack.Navigator initialRouteName='Home'
-        screenOptions={{
-            headerStyle:{backgroundColor: env.HIGHT_PRIORITY},
-            headerTitleStyle: {
-                fontSize: 25
-            },
-            statusBarColor: env.HIGHT_PRIORITY
-        }}>
+        <Stack.Navigator initialRouteName='Profile'
+            screenOptions={{
+                headerStyle: { backgroundColor: env.HIGHT_PRIORITY },
+                headerTitleStyle: {
+                    fontSize: 25,
+                    color: '#ffffff'
+                },
+                statusBarColor: env.HIGHT_PRIORITY,
+                headerRight: () => (<Profile name=''/>)
+
+            }}>
             <Stack.Screen
                 name='Home'
                 component={Home}
                 options={{
                     headerShown: true,
                     headerTitle: 'Uaifood'
+                }} />
+            <Stack.Screen
+                name='Profile'
+                component={ProfileScreen}
+                options={{
+                    headerRight: () => null
                 }} />
         </Stack.Navigator>
     )

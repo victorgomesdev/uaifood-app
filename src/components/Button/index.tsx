@@ -7,7 +7,8 @@ export default function CommonButton({ title, width, onClickHandler, disabled = 
         <TouchableOpacity
             style={[style.buttonContainer, { width: width }]}
             activeOpacity={0.75}
-            disabled={disabled}>
+            disabled={disabled}
+            onPress={onClickHandler}>
             <Text style={style.text}>{title}</Text>
         </TouchableOpacity>
     )
