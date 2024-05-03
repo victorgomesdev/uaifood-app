@@ -14,7 +14,6 @@ export default function Input({ placeholder, width, onChangeHandler, onBlurHandl
             onChangeText={(text) => onChangeHandler(text)}
             onFocus={() => onFocusHandler}
             onBlur={() => onBlurHandler}
-            
         />
     )
 }

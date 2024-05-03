@@ -3,6 +3,6 @@ export default interface InputProps {
     width: number,
     onFocusHandler?: () => void,
     onChangeHandler: (text: string) => void,
-    onBlurHandler?: () => void,
-    onErrorHandler?: () => void
+    onBlurHandler: () => void,
+    onErrorHandler?: (value: string) => void
 }
