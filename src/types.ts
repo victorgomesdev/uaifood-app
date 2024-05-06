@@ -6,5 +6,6 @@ export type DeviceProps = {
     name: string,
     imageURI: string,
     description: string,
-    id: number
+    id: number,
+    clickHandler?: any
 }

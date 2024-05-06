@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 
-export default function App() {
+export default function Device({navigation}: any) {
   return (
     <View style={styles.container}>
       <View style={styles.topBorder}>
@@ -11,27 +11,27 @@ export default function App() {
         style={styles.input}
         placeholder="Nome"
         placeholderTextColor="#00A215" // Cor do texto do placeholder
-         // Cor do texto dentro do input
+      // Cor do texto dentro do input
       />
       <TextInput
         style={styles.input}
         placeholder="Email"
         placeholderTextColor="#00A215" // Cor do texto do placeholder
-         // Cor do texto dentro do input
+      // Cor do texto dentro do input
       />
       <TextInput
         style={styles.input}
         placeholder="Senha"
         secureTextEntry
         placeholderTextColor="#00A215" // Cor do texto do placeholder
-         // Cor do texto dentro do input
+      // Cor do texto dentro do input
       />
       <TextInput
         style={styles.input}
         placeholder="Confirme sua senha"
         secureTextEntry
         placeholderTextColor="#00A215" // Cor do texto do placeholder
-         // Cor do texto dentro do input
+      // Cor do texto dentro do input
       />
       <View style={styles.buttonRow}>
         <TouchableOpacity style={styles.button}>

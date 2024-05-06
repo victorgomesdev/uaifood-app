@@ -8,7 +8,8 @@ const style = StyleSheet.create({
         backgroundColor: env.BACKGROUND,
         paddingTop: 25,
         paddingLeft: 15,
-        paddingRight: 15
+        paddingRight: 15,
+        paddingBottom: 25
     }
 })
 

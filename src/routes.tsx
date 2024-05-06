@@ -8,12 +8,13 @@ import Home from './pages/Home'
 import * as env from '../env.json'
 import Profile from './components/Profile'
 import ProfileScreen from './pages/Profile'
+import Device from './pages/Devices'
 
 const Stack = createNativeStackNavigator()
 
 export default function Routes() {
     return (
-        <Stack.Navigator initialRouteName='Profile'
+        <Stack.Navigator initialRouteName='Home'
             screenOptions={{
                 headerStyle: { backgroundColor: env.HIGHT_PRIORITY },
                 headerTitleStyle: {
@@ -21,7 +22,7 @@ export default function Routes() {
                     color: '#ffffff'
                 },
                 statusBarColor: env.HIGHT_PRIORITY,
-                headerRight: () => (<Profile name=''/>)
+                headerRight: () => (<Profile name='' />)
 
             }}>
             <Stack.Screen
@@ -37,6 +38,13 @@ export default function Routes() {
                 options={{
                     headerRight: () => null
                 }} />
+            <Stack.Screen
+            name='DeviceControl'
+            component={Device}
+            options={{
+                headerTitle: "Device"
+            }}
+            />
         </Stack.Navigator>
     )
 }

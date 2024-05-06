@@ -2,12 +2,12 @@ import { Text, TouchableOpacity, Image, View } from "react-native";
 import style from "./style";
 import { DeviceProps } from "../../types";
 
-export default function Card(props: DeviceProps, navigation: any) {
+export default function Card(props: DeviceProps) {
     return (
         <TouchableOpacity
             activeOpacity={0.6}
             style={style.card}
-            onPress={()=>{}}>
+            onPress={()=> props.clickHandler.navigate('DeviceControl', [])}>
             <View style={style.imageContainer}>
                 <Image
                     source={require('../../../assets/Uaifood.png')}
@@ -15,11 +15,10 @@ export default function Card(props: DeviceProps, navigation: any) {
             </View>
             <View style={style.cardContainer}>
                 <View style={style.nameContainer}>
-                    <Text style={style.title}>Robô</Text>
+                    <Text style={style.title}>{props.name}</Text>
                 </View>
                 <View style={style.descContainer}>
-                    <Text style={style.description}>kdhdgtbfhgvafafsststststttttttsstttttttttttttttttttttttttttttt</Text>
-
+                    <Text style={style.description}>{props.description}</Text>
                 </View>
             </View>
         </TouchableOpacity>
