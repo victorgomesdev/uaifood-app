@@ -1,16 +1,17 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import * as env from '../../../env.json'
 
-export default function Profile({name}: {name: string}){
+export default function Profile({name, navigation}: {name: string, navigation: any}){
     return(
         <TouchableOpacity 
         style={style.profile}
-        activeOpacity={0.75}>
+        activeOpacity={0.75}
+        onPress={()=> navigation.navigate("Profile")}>
             <Text
             style={{textAlign: 'center',
             fontSize: 20,
             color: env.HIGHT_PRIORITY,
-            fontWeight: "500"}}>VG</Text>
+            fontWeight: "500"}}>{name}</Text>
         </TouchableOpacity>
     )
 }

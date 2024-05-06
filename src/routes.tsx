@@ -22,8 +22,8 @@ export default function Routes() {
                     color: '#ffffff'
                 },
                 statusBarColor: env.HIGHT_PRIORITY,
-                headerRight: () => (<Profile name='' />)
-
+                //headerRight: () => (<Profile name='' />)
+                
             }}>
             <Stack.Screen
                 name='Home'

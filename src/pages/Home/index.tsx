@@ -3,12 +3,18 @@ import { FlatList, ScrollView, View } from "react-native";
 import style from "./style";
 import Card from "../../components/Card";
 import { DeviceProps } from '../../types';
+import Profile from '../../components/Profile';
 
 export default function Home({ navigation, page }: any) {
 
     const [devices, setDevices] = useState<DeviceProps[]>([])
 
     useEffect(() => {
+
+        navigation.setOptions({
+            headerRight: ()=> (<Profile name='VG' navigation={navigation}/>)
+        })
+
         setDevices([
             { id: 1, name: 'jhjgfgdgk', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
             { id: 1, name: 'jhdfjh', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
