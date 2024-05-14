@@ -31,11 +31,13 @@ export default function LoginPage({ navigation }: any) {
                         placeholder='Email'
                         width={200}
                         onChangeHandler={() => { }}
+                        onBlurHandler={()=>{}}
                     />
                     <Input
                         placeholder='Senha'
                         width={180}
                         onChangeHandler={() => { }}
+                        onBlurHandler={()=>{}}
                     />
                 </View>
 

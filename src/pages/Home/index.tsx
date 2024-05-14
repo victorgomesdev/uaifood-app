@@ -16,12 +16,11 @@ export default function Home({ navigation, page }: any) {
         })
 
         setDevices([
-            { id: 1, name: 'jhjgfgdgk', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
-            { id: 1, name: 'jhdfjh', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
-            { id: 2, name: 'hgdjgj', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
-            { id: 3, name: 'hfhf', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
-            { id: 3, name: 'kjfljf', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
-            { id: 3, name: 'jfhkddjhfkh', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
+            { id: 1, name: 'Alimentador do aquário', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
+            { id: 1, name: 'Alimentador da granja', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
+            { id: 2, name: 'Alimentador do canil', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
+            { id: 3, name: 'Alimentador das vacas ', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
+            { id: 3, name: 'Alimentador do papagaio', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' }
         ])
     }, [])
 

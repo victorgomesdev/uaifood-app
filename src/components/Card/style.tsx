@@ -29,7 +29,7 @@ const style = StyleSheet.create({
         
     },
     title:{
-        fontSize: 30
+        fontSize: 25,
     },
     description:{
         fontSize: 15
@@ -40,11 +40,19 @@ const style = StyleSheet.create({
         justifyContent: 'space-between',
         paddingLeft: 10,
         paddingRight: 5,
-        alignItems: 'center'
+        alignItems: 'center',
+        flex: 3
     },
     descContainer:{
         paddingLeft: 10,
-        paddingRight: 5
+        paddingRight: 5,
+        flex: 3,
+        display: 'flex',
+        justifyContent: 'center'
+    },
+    image:{
+        height: 140,
+        width: 140
     }
 })
  

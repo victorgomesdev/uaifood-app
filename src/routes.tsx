@@ -9,12 +9,13 @@ import * as env from '../env.json'
 import Profile from './components/Profile'
 import ProfileScreen from './pages/Profile'
 import Device from './pages/Devices'
+import LoginScreen from './pages/Login/login'
 
 const Stack = createNativeStackNavigator()
 
 export default function Routes() {
     return (
-        <Stack.Navigator initialRouteName='Home'
+        <Stack.Navigator initialRouteName='Login'
             screenOptions={{
                 headerStyle: { backgroundColor: env.HIGHT_PRIORITY },
                 headerTitleStyle: {
@@ -25,11 +26,18 @@ export default function Routes() {
                 //headerRight: () => (<Profile name='' />)
                 
             }}>
+                <Stack.Screen
+                name='Login'
+                component={LoginScreen}
+                options={{
+                    headerShown: false
+                }}
+                >
+                </Stack.Screen>
             <Stack.Screen
                 name='Home'
                 component={Home}
                 options={{
-                    headerShown: true,
                     headerTitle: 'Uaifood'
                 }} />
             <Stack.Screen

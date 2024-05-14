@@ -26,7 +26,7 @@ export default function ProfileScreen({ navigation, route }: any) {
                 title="Sair"
                 disabled={false} 
                 width={180}
-                onClickHandler={()=> navigation.navigate('Home')}/>
+                onClickHandler={()=> navigation.navigate('Login')}/>
             </View>
         </View>
     )

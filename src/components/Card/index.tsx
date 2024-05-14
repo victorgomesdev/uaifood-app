@@ -11,7 +11,8 @@ export default function Card(props: DeviceProps) {
             <View style={style.imageContainer}>
                 <Image
                     source={require('../../../assets/Uaifood.png')}
-                    resizeMode="center"/>
+                    resizeMode="contain"
+                    style={style.image}/>
             </View>
             <View style={style.cardContainer}>
                 <View style={style.nameContainer}>

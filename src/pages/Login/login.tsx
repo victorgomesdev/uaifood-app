@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { StatusBar, TextInput, TouchableOpacity, StyleSheet, Text, View, Image } from 'react-native';
+import * as env from '../../../env.json'
 
-export default function App() {
+export default function LoginScreen({navigation}: any) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
     // Lógica de login aqui
-    console.log("Email:", email);
-    console.log("Password:", password);
+    // console.log("Email:", email);
+    // console.log("Password:", password);
+
+    navigation.navigate('Home')
   };
 
   const handleCreateAccount = () => {
@@ -20,7 +23,7 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.loginContainer}>
         <Image
-          source={require('./assets/Uaifood.png')}
+          source={require('../../../assets/Uaifood.png')}
           style={styles.logo}
         />
         <TextInput
@@ -55,7 +58,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF', // Fundo verde
+    backgroundColor: env.BACKGROUND, // Fundo verde
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -67,7 +70,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    width: 250,
+    width: 120,
     height: 120,
     marginBottom: 20,
   },
@@ -78,6 +81,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     marginBottom: 60, // Ajuste o espaçamento vertical entre os inputs
     paddingHorizontal: 10,
+    borderRadius: 6
   },
   buttonContainer: {
     flexDirection: 'row',
