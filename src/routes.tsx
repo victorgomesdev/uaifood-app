@@ -10,6 +10,8 @@ import Profile from './components/Profile'
 import ProfileScreen from './pages/Profile'
 import Device from './pages/Devices'
 import LoginScreen from './pages/Login/login'
+import Account from './pages/Account'
+import CreateDevice from './pages/CreateDevice'
 
 const Stack = createNativeStackNavigator()
 
@@ -38,14 +40,12 @@ export default function Routes() {
                 name='Home'
                 component={Home}
                 options={{
-                    headerTitle: 'Uaifood'
+                    headerTitle: 'Uaifood',
                 }} />
             <Stack.Screen
                 name='Profile'
                 component={ProfileScreen}
-                options={{
-                    headerRight: () => null
-                }} />
+                />
             <Stack.Screen
             name='DeviceControl'
             component={Device}
@@ -53,6 +53,17 @@ export default function Routes() {
                 headerTitle: "Device"
             }}
             />
+
+            <Stack.Screen
+            name='CreateAccount'
+            component={Account}
+            options={{
+                headerShown: false
+            }}/>
+
+            <Stack.Screen
+            name='CreateDevice'
+            component={CreateDevice}/>
         </Stack.Navigator>
     )
 }

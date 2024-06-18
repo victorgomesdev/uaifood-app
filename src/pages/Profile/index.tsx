@@ -26,7 +26,7 @@ export default function ProfileScreen({ navigation, route }: any) {
                 title="Sair"
                 disabled={false} 
                 width={180}
-                onClickHandler={()=> navigation.navigate('Login')}/>
+                onClickHandler={()=> navigation.reset({index: 0, routes: [{name: 'Login'}]})}/>
             </View>
         </View>
     )

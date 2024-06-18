@@ -7,7 +7,7 @@ export default function Card(props: DeviceProps) {
         <TouchableOpacity
             activeOpacity={0.6}
             style={style.card}
-            onPress={()=> props.clickHandler.navigate('DeviceControl', [])}>
+            onPress={()=> props.clickHandler.navigate('DeviceControl', {name: props.name})}>
             <View style={style.imageContainer}>
                 <Image
                     source={require('../../../assets/Uaifood.png')}

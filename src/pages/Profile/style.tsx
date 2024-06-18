@@ -26,7 +26,7 @@ const style = StyleSheet.create({
         gap: 30,
         alignSelf: 'center',
         marginTop: 30,
-        
+        marginBottom: 30
     }
 })
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StatusBar, TextInput, TouchableOpacity, StyleSheet, Text, View, Image } from 'react-native';
 import * as env from '../../../env.json'
 
-export default function LoginScreen({navigation}: any) {
+export default function LoginScreen({ navigation }: any) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -11,12 +11,12 @@ export default function LoginScreen({navigation}: any) {
     // console.log("Email:", email);
     // console.log("Password:", password);
 
-    navigation.navigate('Home')
+    navigation.reset({ index: 0, routes: [{ name: 'Home' }] })
   };
 
   const handleCreateAccount = () => {
     // Lógica para criar uma nova conta aqui
-    console.log("Criar conta");
+    navigation.navigate('CreateAccount')
   };
 
   return (
@@ -50,7 +50,6 @@ export default function LoginScreen({navigation}: any) {
           </TouchableOpacity>
         </View>
       </View>
-      <StatusBar barStyle={"default"} />
     </View>
   );
 }
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF', // Cor de fundo branca para a área de login
     padding: 30,
     borderRadius: 10,
-    width: '80%',
+    width: '90%',
     alignItems: 'center',
   },
   logo: {
