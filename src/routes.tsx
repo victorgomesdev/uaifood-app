@@ -63,7 +63,10 @@ export default function Routes() {
 
             <Stack.Screen
             name='CreateDevice'
-            component={CreateDevice}/>
+            component={CreateDevice}
+            options={{
+                headerTitle: 'Cadastrar aparelho'
+            }}/>
         </Stack.Navigator>
     )
 }

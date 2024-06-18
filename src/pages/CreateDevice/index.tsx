@@ -31,10 +31,7 @@ const CreateDevice = () => {
 
     return (
         <View style={styles.mainContainer}>
-            <View style={styles.header}>
-                <Text style={styles.headerText}>Credenciais</Text>
-            </View>
-
+           
             <ScrollView
                 ref={scrollViewRef}
                 contentContainerStyle={styles.scrollContainer}
@@ -170,6 +167,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#00A215', // Cor de fundo do botão "Cancelar" (Altere conforme necessário)
         padding: 10,
         borderRadius: 5,
+        alignItems: 'center'
     },
     buttonDone: {
         backgroundColor: '#00A215', // Cor de fundo do botão "Pronto" (Altere conforme necessário)
@@ -179,6 +177,7 @@ const styles = StyleSheet.create({
     buttonText: {
         color: 'white', // Cor do texto dos botões (Altere conforme necessário)
         fontWeight: 'bold',
+        textAlign: 'center'
     },
     footer: {
         height: 50,

@@ -17,9 +17,9 @@ export default function Home({ navigation, page }: any) {
         })
 
         setDevices([
-            { id: 1, name: 'Alimentador do aquário', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
-            { id: 1, name: 'Alimentador da granja', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
-            { id: 2, name: 'Bebedouro do canil', description: 'hfkhfkhf', imageURI: 'jdhfdufbhuf' },
+            { id: 1, name: 'Alimentador do aquário', description: 'Deve ser reabastecido a cada três dias.', imageURI: 'jdhfdufbhuf' },
+            { id: 1, name: 'Alimentador da granja', description: 'Fica próximo a parede', imageURI: 'jdhfdufbhuf' },
+            { id: 2, name: 'Bebedouro do canil', description: 'Lembre de lavá-lo  diariamente', imageURI: 'jdhfdufbhuf' },
         ])
     }, [])
 
