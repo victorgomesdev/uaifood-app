@@ -1,19 +1,17 @@
 import React, { useState, useContext } from 'react';
-import { StatusBar, TextInput, TouchableOpacity, StyleSheet, Text, View, Image } from 'react-native';
+import { TextInput, TouchableOpacity, StyleSheet, Text, View, Image } from 'react-native';
 import * as env from '../../../env.json'
-import { authentication, AuthContext} from '../../services/auth';
+import { AuthContext } from '../../services/auth';
 
 export default function LoginScreen({ navigation }: any) {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const authContext = useContext(AuthContext)
+  const { authentication }: any = useContext(AuthContext)
 
-  const handleLogin = async  () => {
-    
-    const loginData = await authentication({email, password})
-    if (loginData.token){
-      
-    }
+  const handleLogin = async () => {
+
+    authentication({ email, password })
   };
 
   const handleCreateAccount = () => {
